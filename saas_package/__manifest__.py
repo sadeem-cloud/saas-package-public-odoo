@@ -24,4 +24,5 @@
     'auto_install': False,
     'license': 'OPL-1',
     'images': ['static/description/banner.gif'],
+    'live_test_url': 'https://sadeem.cloud/request-demo',
 }
