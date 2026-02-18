@@ -13,7 +13,7 @@
     'author': "SADEEM",
     'website': "https://sadeem.cloud",
     'category': 'Technical',
-    'version': '1.250917',
+    'version': '1.260218',
     'depends': ['base'],
     'data': [
     ],

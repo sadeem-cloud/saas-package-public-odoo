@@ -75,10 +75,22 @@
                         Customer Portal
                     </span>
                 </a>
+                <a href="#screenshots">
+                    <span class="btn btn-primary"
+                          style="border:1px solid #2c546d; padding:.375rem .75rem; font-size:1rem; line-height:1.5; border-radius:.25rem; background-color:#fff;color:#2c546d;">
+                        Screenshots
+                    </span>
+                </a>
                 <a href="#faq">
                     <span class="btn btn-primary"
                           style="border:1px solid #2c546d; padding:.375rem .75rem; font-size:1rem; line-height:1.5; border-radius:.25rem; background-color:#fff;color:#2c546d;">
                         F.A.Q
+                    </span>
+                </a>
+                <a href="#change-log">
+                    <span class="btn btn-primary"
+                          style="border:1px solid #2c546d; padding:.375rem .75rem; font-size:1rem; line-height:1.5; border-radius:.25rem; background-color:#fff;color:#2c546d;">
+                        Change Log
                     </span>
                 </a>
                 <a href="#about">
@@ -112,10 +124,12 @@
                             <h4 class="card-title font-weight-bold">Subscription Management</h4>
                             <hr>
                             <p>
-                                Complete lifecycle management: draft → confirm → build → run → stop<br/>
+                                Complete lifecycle management: draft, confirm, build, run, stop<br/>
                                 <strong>User & storage limits</strong> per subscription<br/>
-                                <strong>Grace period</strong> after expiration<br/>
-                                Auto-provisioning from invoices
+                                <strong>Grace period</strong> after expiration with auto-suspend<br/>
+                                Auto-provisioning from paid invoices<br/>
+                                Customer domain with CNAME verification and auto SSL<br/>
+                                Detailed action logging and audit trail
                             </p>
                         </div>
                     </div>
@@ -131,9 +145,53 @@
                             <h4 class="card-title font-weight-bold">Dual Deployment Methods</h4>
                             <hr>
                             <p>
-                                <strong>Docker/Portainer:</strong> Full container isolation, resource control<br/>
-                                <strong>DBFilter:</strong> Shared Odoo instance, lighter resources<br/>
-                                Choose per subscription based on needs
+                                <strong>Docker/Portainer:</strong> Full container isolation, dedicated resources, Git,
+                                Code Server, stages<br/>
+                                <strong>DBFilter:</strong> Shared Odoo instance, lighter resources, fast
+                                provisioning<br/>
+                                Choose per subscription based on customer needs<br/>
+                                Both methods support Nginx, Cloudflare, backups, and portal
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6" style="margin-top:30px">
+                    <div class="card testimonial-card mt-2 mb-3" style="overflow: hidden;border-top-left-radius: .25rem;
+                                                                border-top-right-radius: .25rem;border-color: #ef573a;">
+                        <div class="avatar mx-auto white" style="">
+                            <i class="fa fa-globe fa-6x" style="padding:20px;color:#3d7a8d;"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="card-title font-weight-bold">Website Plans & Online Purchase</h4>
+                            <hr>
+                            <p>
+                                <strong>Public-facing plans page</strong> on your Odoo website<br/>
+                                Customers browse plans, pick a subdomain, and purchase online<br/>
+                                <strong>Configurable addons</strong> per plan with pricing<br/>
+                                Integrated with Odoo eCommerce and payment providers<br/>
+                                Auto-creates subscription after successful payment
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6" style="margin-top:30px">
+                    <div class="card testimonial-card mt-2 mb-3" style="overflow: hidden;border-top-left-radius: .25rem;
+                                                                border-top-right-radius: .25rem;border-color: #ef573a;">
+                        <div class="avatar mx-auto white" style="">
+                            <i class="fa fa-clock-o fa-6x" style="padding:20px;color:#3d7a8d;"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="card-title font-weight-bold">Trial Subscriptions</h4>
+                            <hr>
+                            <p>
+                                <strong>Public trial request form</strong> on your website<br/>
+                                <strong>Time-limited trials</strong> with configurable duration<br/>
+                                Custom trial packages with module restrictions<br/>
+                                <strong>Auto-cleanup</strong> of expired trials via scheduled actions<br/>
+                                Seamless conversion to paid subscription<br/>
+                                Works with both Docker and DBFilter
                             </p>
                         </div>
                     </div>
@@ -149,10 +207,11 @@
                             <h4 class="card-title font-weight-bold">Automated Backup System</h4>
                             <hr>
                             <p>
-                                <strong>Scheduled backups</strong> with cron jobs<br/>
-                                <strong>On-demand backups</strong> via portal<br/>
-                                <strong>Auto-cleanup</strong> of old backups<br/>
-                                Restore with one click
+                                <strong>Scheduled backups</strong> with configurable cron jobs<br/>
+                                <strong>On-demand backups</strong> from backend or customer portal<br/>
+                                <strong>Auto-cleanup</strong> with retention policies<br/>
+                                One-click restore with optional database neutralization<br/>
+                                Remote backup server support
                             </p>
                         </div>
                     </div>
@@ -171,7 +230,8 @@
                                 Define <strong>module packages</strong> for different plans<br/>
                                 <strong>Auto-install</strong> required modules per subscription<br/>
                                 Module restrictions per plan<br/>
-                                Easy upgrade/downgrade between packages
+                                Easy upgrade/downgrade between packages<br/>
+                                Server-wide modules and per-image defaults
                             </p>
                         </div>
                     </div>
@@ -188,8 +248,9 @@
                             <hr>
                             <p>
                                 <strong>Multiple stages</strong> per subscription (dev, test, staging)<br/>
-                                Clone production to stage<br/>
-                                Separate branch deployment per stage<br/>
+                                Clone production database to stage<br/>
+                                Separate Git branch deployment per stage<br/>
+                                Independent Nginx and Cloudflare per stage<br/>
                                 <span class="text-muted small">*Docker only</span>
                             </p>
                         </div>
@@ -200,16 +261,58 @@
                     <div class="card testimonial-card mt-2 mb-3" style="overflow: hidden;border-top-left-radius: .25rem;
                                                                 border-top-right-radius: .25rem;border-color: #ef573a;">
                         <div class="avatar mx-auto white" style="">
-                            <i class="fa fa-clock-o fa-6x" style="padding:20px;color:#3d7a8d;"></i>
+                            <i class="fa fa-stethoscope fa-6x" style="padding:20px;color:#3d7a8d;"></i>
                         </div>
                         <div class="card-body text-center">
-                            <h4 class="card-title font-weight-bold">Trial Subscriptions</h4>
+                            <h4 class="card-title font-weight-bold">Infrastructure Diagnosis & Auto-Fix</h4>
                             <hr>
                             <p>
-                                <strong>Time-limited trials</strong> with automatic expiration<br/>
-                                Custom trial packages<br/>
-                                <strong>Auto-cleanup</strong> of expired trials<br/>
-                                Easy conversion to paid subscription
+                                <strong>One-click diagnosis</strong> scans Nginx, Cloudflare, Docker, and stack
+                                health<br/>
+                                <strong>Auto-fix</strong> detected issues: recreate missing hosts, update stale configs,
+                                correct DNS records<br/>
+                                Detailed report with issue count and fix status<br/>
+                                Verifies IP, ports, proxy settings, and container state
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6" style="margin-top:30px">
+                    <div class="card testimonial-card mt-2 mb-3" style="overflow: hidden;border-top-left-radius: .25rem;
+                                                                border-top-right-radius: .25rem;border-color: #ef573a;">
+                        <div class="avatar mx-auto white" style="">
+                            <i class="fa fa-database fa-6x" style="padding:20px;color:#3d7a8d;"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="card-title font-weight-bold">Database Management</h4>
+                            <hr>
+                            <p>
+                                <strong>Duplicate databases</strong> across subscriptions<br/>
+                                <strong>Restore from template</strong> (file path or upload)<br/>
+                                Database neutralization to remove production configs<br/>
+                                Drop and recreate databases safely<br/>
+                                External PostgreSQL server support
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6" style="margin-top:30px">
+                    <div class="card testimonial-card mt-2 mb-3" style="overflow: hidden;border-top-left-radius: .25rem;
+                                                                border-top-right-radius: .25rem;border-color: #ef573a;">
+                        <div class="avatar mx-auto white" style="">
+                            <i class="fa fa-sitemap fa-6x" style="padding:20px;color:#3d7a8d;"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="card-title font-weight-bold">Multi-Server Architecture</h4>
+                            <hr>
+                            <p>
+                                <strong>Unlimited root servers</strong> with SSH management<br/>
+                                Multiple Portainer environments per server<br/>
+                                <strong>Auto port allocation</strong> across environments<br/>
+                                Server health monitoring and resource dashboards<br/>
+                                Distribute subscriptions across infrastructure
                             </p>
                         </div>
                     </div>
@@ -226,8 +329,9 @@
                             <hr>
                             <p>
                                 Support for Odoo versions <strong>14, 15, 16, 17, 18+</strong><br/>
-                                Different versions per subscription<br/>
-                                Version-specific configurations
+                                Different Odoo versions per subscription<br/>
+                                Version-specific Docker images and configurations<br/>
+                                Run multiple versions on the same server
                             </p>
                         </div>
                     </div>
@@ -244,9 +348,9 @@
                             <hr>
                             <p>
                                 <strong>Multiple admins</strong> per subscription<br/>
-                                Role-based access control<br/>
-                                Invite team members to manage subscriptions<br/>
-                                Collaborator limits per plan
+                                Invite team members to manage subscriptions from portal<br/>
+                                Collaborator limits per plan<br/>
+                                GitHub login support for customer authentication
                             </p>
                         </div>
                     </div>
@@ -606,6 +710,93 @@
             <br/>
         </div>
 
+        <!-- ============ SCREENSHOTS ============ -->
+        <div class="mb-4 bg-white shadow" style="border-radius:20px; font-family:'Inter', sans-serif">
+            <h4 style="font-size:24px; font-family:'Lato', 'Open Sans', 'Helvetica', Sans; text-align:center;color:#2c546d"
+                id="screenshots">
+                <span class="d-none d-sm-inline-block"
+                      style="width:10%; margin:32px 20px; border-top:solid 2px; vertical-align:middle; opacity:0.3;color:#e45d3c"></span>
+                <b>Screenshots</b>
+                <span class="d-none d-sm-inline-block"
+                      style="width:10%; margin:32px 20px; border-top:solid 2px; vertical-align:middle; opacity:0.3;color:#e45d3c"></span>
+            </h4>
+            <div style="width:95%; margin:0 auto; padding-bottom:30px;">
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Subscription Management Kanban</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/subscription-kanban.png" class="img-fluid shadow rounded"
+                         style="max-width:90%;" alt="Subscription Kanban">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Subscription Management Form</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/subscription-form.png" class="img-fluid shadow rounded"
+                         style="max-width:90%;" alt="Subscription Form">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Website Plans - Public Pricing Page</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/website-plans.png" class="img-fluid shadow rounded" style="max-width:90%;"
+                         alt="Website Plans">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Trial Request Form</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/trial-form.png" class="img-fluid shadow rounded" style="max-width:90%;"
+                         alt="Trial Request Form">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Customer Portal All</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/customer-portal-all.png" class="img-fluid shadow rounded"
+                         style="max-width:90%;" alt="Customer Portal">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Customer Portal Single Subscription</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/customer-portal.png" class="img-fluid shadow rounded" style="max-width:90%;"
+                         alt="Customer Portal">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Customer Portal Create Backup</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/customer-portal-create-backup.png" class="img-fluid shadow rounded"
+                         style="max-width:90%;" alt="Customer Portal">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Customer Portal Git Integration</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/customer-portal-git.png" class="img-fluid shadow rounded"
+                         style="max-width:90%;" alt="Customer Portal">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Customer Portal Run SQL</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/customer-portal-run-sql.png" class="img-fluid shadow rounded"
+                         style="max-width:90%;" alt="Customer Portal">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Customer Portal Run Command</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/customer-portal-run-command.png" class="img-fluid shadow rounded"
+                         style="max-width:90%;" alt="Customer Portal">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Server Dashboard & Monitoring</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/server-dashboard.png" class="img-fluid shadow rounded" style="max-width:90%;"
+                         alt="Server Dashboard">
+                </div>
+
+                <h5 class="text-center mt-4 mb-3" style="color:#3d7a8d;">Code Server (VS Code in Browser)</h5>
+                <div class="text-center mb-4">
+                    <img src="/screenshots/code-server.png" class="img-fluid shadow rounded" style="max-width:90%;"
+                         alt="Code Server">
+                </div>
+
+            </div>
+        </div>
+
         <!-- ============ FAQ ============ -->
         <div class="mb-4 bg-white shadow" style="border-radius:20px; font-family:'Inter', sans-serif">
             <h4 style="font-size:24px; font-family:'Lato', 'Open Sans', 'Helvetica', Sans; text-align:center;color:#2c546d"
@@ -725,7 +916,36 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-12">
 
-                    <h5 class="mt-4"><span class="p-2 bg-success text-white shadow rounded"> Version 1.260124</span> -
+                    <h5 class="mt-4"><span class="p-2 bg-success text-white shadow rounded"> Version 1.260218</span> -
+                        2026-02-18</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="text-muted ml-3"><i class="fa fa-plus text-success mr-2"></i>
+                            Add <strong>Website Plans</strong> module - public-facing plan browser with subdomain
+                            picker, addon configurator, and online purchase through Odoo eCommerce
+                        </li>
+                        <li class="text-muted ml-3"><i class="fa fa-plus text-success mr-2"></i>
+                            Add <strong>Trial Subscriptions</strong> module - public trial request form, configurable
+                            trial packages, auto-expiration and cleanup, works with Docker and DBFilter
+                        </li>
+                        <li class="text-muted ml-3"><i class="fa fa-plus text-success mr-2"></i>
+                            Add <strong>GitHub Login</strong> module - allow customers to sign in with their GitHub
+                            account
+                        </li>
+                        <li class="text-muted ml-3"><i class="fa fa-wrench text-primary mr-2"></i>
+                            Enhanced <strong>Infrastructure Diagnosis</strong> - now verifies and auto-fixes Nginx proxy
+                            config (ports, locations, headers), Docker stack config before restart, and Cloudflare DNS
+                            record IP mismatches
+                        </li>
+                        <li class="text-muted ml-3"><i class="fa fa-wrench text-primary mr-2"></i>
+                            Add Cloudflare DNS record update API - diagnosis can now correct stale DNS IPs automatically
+                        </li>
+                        <li class="text-muted ml-3"><i class="fa fa-wrench text-primary mr-2"></i>
+                            Docker diagnosis now updates stack configuration before restarting stopped or missing
+                            containers
+                        </li>
+                    </ul>
+
+                    <h5 class="mt-4"><span class="p-2 bg-light shadow rounded text-success"> Version 1.260124</span> -
                         2026-01-24</h5>
                     <ul class="list-unstyled mt-3">
                         <li class="text-muted ml-3"><i class="fa fa-plus text-success mr-2"></i>
