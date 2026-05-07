@@ -17,7 +17,7 @@
     'depends': ['base'],
     'data': [
     ],
-    'price': 6000.00,
+    'price': 4499,
     'currency': 'USD',
     'installable': True,
     'application': True,
